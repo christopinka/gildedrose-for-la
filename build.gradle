@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.6.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
+    //TODO: figure out transitive dependency warning
+    testImplementation 'com.approvaltests:approvaltests:12.3.1'
+}
+
+group = 'com.gildedrose'
+version = '0.0.1-SNAPSHOT'
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.register('texttest', JavaExec) {
+//    main = "com.gildedrose.TexttestFixture"
+    classpath = sourceSets.test.runtimeClasspath
+    args "30"
+}

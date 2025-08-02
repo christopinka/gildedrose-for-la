@@ -19,9 +19,7 @@ class ApprovalsTest {
                 ItemName.HAND.getValue(),
                 ItemName.MAGIC.getValue()},
             sellInValues,
-//            1, 5, 6, 7, 10, 11, 12, 42, 4242, -1, -42, -4242},
             qualityValues
-//            , 1, 49, 50, 51, 4242, -1, -42, -4242}
         );
     }
 
